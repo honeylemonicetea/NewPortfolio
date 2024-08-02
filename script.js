@@ -11,7 +11,7 @@ if (performance.navigation.type == performance.navigation.TYPE_RELOAD){
 
 let backgroundChange = function(){
     controlButtons.forEach(e=>e.style.backgroundColor="transparent")
-    controlButtons[scrollFactor].style.backgroundColor = "rgba(0,0,0,0.25)"
+    controlButtons[scrollFactor].style.backgroundColor = "rgba(255,255,255,0.5)"
 }
 
 
