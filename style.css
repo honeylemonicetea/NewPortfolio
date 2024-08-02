@@ -13,10 +13,9 @@ footer,
 section {
   height: 100vh;
   display: flex;
-  /* font-size: 5rem; */
   align-items: center;
   justify-content: center;
-  /* scroll-snap-align: start; */
+
 }
 
 header {
@@ -140,4 +139,15 @@ section:last-of-type {
     padding: 10px;
     display: inline-block;
     border-radius: 10px;
+}
+
+
+@media (max-width: 400px) {
+  .header-nav{
+    width: 70%;
+  }
+  .project {
+  justify-content: center;
+
+  }
 }
