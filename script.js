@@ -27,6 +27,19 @@ document.addEventListener("wheel", function(event){
 
     
 })
+document.addEventListener("keydown", function(event){
+    let keyCode = event.keyCode
+ 
+    if (keyCode==40 && scrollFactor < childrenLength-1){
+        scrollFactor++
+    } else if (keyCode==38 && scrollFactor > 0) {
+        scrollFactor--
+    }
+    pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
+    backgroundChange()
+})
+
+
 
 
 for (let i=0; i<controlButtons.length; i++) {
