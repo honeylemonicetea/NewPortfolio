@@ -38,36 +38,51 @@ document.addEventListener("keydown", function(event){
     pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
     backgroundChange()
 })
-let yDown = 0
-let yUp = 0
-document.addEventListener("mousedown", function(event){
-    console.log("down")
-    console.dir(event)
-    yDown = event.pageY
-})
-document.addEventListener("mouseup", function(event){
-    console.log("up")
-    console.dir(event)
-    yUp = event.pageY
-    // dragging up, move the wrapper up
-    if (yDown > yUp && scrollFactor < childrenLength-1 && Math.abs(yDown-yUp)>250){
-        scrollFactor++
-    } else if (yDown < yUp && scrollFactor > 0 && Math.abs(yDown-yUp)>250) {
-        scrollFactor--
+
+// let yDown = 0
+// let yUp = 0
+// document.addEventListener("mousedown", function(event){
+//     console.log("down")
+//     console.dir(event)
+//     yDown = event.pageY
+// })
+// document.addEventListener("mouseup", function(event){
+//     console.log("up")
+//     console.dir(event)
+//     yUp = event.pageY
+//     // dragging up, move the wrapper up
+//     if (yDown > yUp && scrollFactor < childrenLength-1 && Math.abs(yDown-yUp)>250){
+//         scrollFactor++
+//     } else if (yDown < yUp && scrollFactor > 0 && Math.abs(yDown-yUp)>250) {
+//         scrollFactor--
+//     }
+//     console.log(scrollFactor)
+//     pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
+//     backgroundChange()
+// })
+
+// // drag events 
+// pageWrapper.addEventListener("drag", function(event){
+//     console.log("e")
+//     alert("hey")
+//     console.dir(event)
+// })
+
+document.addEventListener("touchstart", startTouching)
+let touchStartY = 0
+let touchEndY = 0
+
+function startTouching (event){
+    touchStartY = event.changedTouches[0].screenY
+}
+function stopTouching (event){
+    touchEndY = event.changedTouches[0].screenY
+    if (touchStartY > touchEndY && scrollFactor < childrenLength - 1) {
+        scrollFactor ++ 
+    } else if (touchStartY < touchEndY && scrollFactor > 0 ){
+        scrollFactor -- 
     }
-    console.log(scrollFactor)
-    pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
-    backgroundChange()
-
-
-})
-
-// drag events 
-pageWrapper.addEventListener("drag", function(event){
-    console.log("e")
-    alert("hey")
-    console.dir(event)
-})
+}
 
 
 for (let i=0; i<controlButtons.length; i++) {
