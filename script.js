@@ -82,6 +82,8 @@ function stopTouching (event){
     } else if (touchStartY < touchEndY && scrollFactor > 0 ){
         scrollFactor -- 
     }
+    pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
+    backgroundChange()
 }
 
 
