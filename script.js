@@ -69,6 +69,7 @@ document.addEventListener("keydown", function(event){
 // })
 
 document.addEventListener("touchstart", startTouching)
+document.addEventListener("touchend", stopTouching)
 let touchStartY = 0
 let touchEndY = 0
 
