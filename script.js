@@ -5,97 +5,85 @@ let pageWrapper = document.querySelector(".page-wrapper")
 let childrenLength = pageWrapper.children.length
 let controlButtons = [...document.querySelector(".page-controls").children]
 
-if (performance.navigation.type == performance.navigation.TYPE_RELOAD){
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
     pageWrapper.style.transform = `translateY(0)`
 }
 
-let backgroundChange = function(){
-    controlButtons.forEach(e=>e.style.backgroundColor="transparent")
+let backgroundChange = function () {
+    pageWrapper.style.transform = `translateY(-${scrollFactor * 100}vh)`
+    controlButtons.forEach(e => e.style.backgroundColor = "transparent")
     controlButtons[scrollFactor].style.backgroundColor = "rgba(255,255,255,0.5)"
 }
 
 
-document.addEventListener("wheel", function(event){
+document.addEventListener("wheel", function (event) {
     let deltaY = event.deltaY //positive  - scroll down, negative - scroll up
-    if (deltaY > 0 && scrollFactor < childrenLength - 1){
+    if (deltaY > 0 && scrollFactor < childrenLength - 1) {
         scrollFactor++
     } else if (deltaY < 0 && scrollFactor > 0) {
         scrollFactor--
     }
-    pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
-    backgroundChange()
 
-    
+    backgroundChange()
 })
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function (event) {
     let keyCode = event.keyCode
- 
-    if (keyCode==40 && scrollFactor < childrenLength-1){
+
+    if (keyCode == 40 && scrollFactor < childrenLength - 1) {
         scrollFactor++
-    } else if (keyCode==38 && scrollFactor > 0) {
+    } else if (keyCode == 38 && scrollFactor > 0) {
         scrollFactor--
     }
-    pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
+
     backgroundChange()
 })
 
-// let yDown = 0
-// let yUp = 0
-// document.addEventListener("mousedown", function(event){
-//     console.log("down")
-//     console.dir(event)
-//     yDown = event.pageY
-// })
-// document.addEventListener("mouseup", function(event){
-//     console.log("up")
-//     console.dir(event)
-//     yUp = event.pageY
-//     // dragging up, move the wrapper up
-//     if (yDown > yUp && scrollFactor < childrenLength-1 && Math.abs(yDown-yUp)>250){
-//         scrollFactor++
-//     } else if (yDown < yUp && scrollFactor > 0 && Math.abs(yDown-yUp)>250) {
-//         scrollFactor--
-//     }
-//     console.log(scrollFactor)
-//     pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
-//     backgroundChange()
-// })
-
-// // drag events 
-// pageWrapper.addEventListener("drag", function(event){
-//     console.log("e")
-//     alert("hey")
-//     console.dir(event)
-// })
 
 document.addEventListener("touchstart", startTouching)
 document.addEventListener("touchend", stopTouching)
 let touchStartY = 0
 let touchEndY = 0
 
-function startTouching (event){
+function startTouching(event) {
     touchStartY = event.changedTouches[0].screenY
 }
-function stopTouching (event){
+function stopTouching(event) {
     touchEndY = event.changedTouches[0].screenY
     if (touchStartY > touchEndY && scrollFactor < childrenLength - 1) {
-        scrollFactor ++ 
-    } else if (touchStartY < touchEndY && scrollFactor > 0 ){
-        scrollFactor -- 
+        scrollFactor++
+    } else if (touchStartY < touchEndY && scrollFactor > 0) {
+        scrollFactor--
     }
-    pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
+
     backgroundChange()
 }
 
 
-for (let i=0; i<controlButtons.length; i++) {
-    controlButtons[i].addEventListener("click", function(){
+for (let i = 0; i < controlButtons.length; i++) {
+    controlButtons[i].addEventListener("click", function () {
         scrollFactor = i
-        pageWrapper.style.transform = `translateY(-${scrollFactor*100}vh)`
+
         backgroundChange()
     })
 }
 
+// navigation
+let homeBtn = document.getElementById("home-btn")
+let projectsBtn = document.getElementById("projects-btn")
+let footerBtn = document.getElementById("footer-btn")
+homeBtn.onclick = () => {
+    scrollFactor = 0
+    backgroundChange()
+}
+projectsBtn.onclick = () => {
+    scrollFactor = 1
+    backgroundChange()
+}
+footerBtn.onclick = () => {
+    scrollFactor = childrenLength - 1
+    backgroundChange()
+
+}
 
 
 // TYPEWRITER ANIMATION FOR THE HEADER
