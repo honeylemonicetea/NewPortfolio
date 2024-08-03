@@ -29,7 +29,7 @@ footer {
 }
 
 
-section{
+section {
     background-color: rgb(70, 231, 243);
 }
 
@@ -129,7 +129,8 @@ section{
     padding: 10px;
     border-radius: 10px;
 }
-.project-title{
+
+.project-title {
     font-size: 2rem;
 }
 
@@ -154,13 +155,18 @@ section{
     background-color: #f1f1f1;
 }
 
-.project-tags{
+.project-tags {
     display: flex;
     gap: 15px;
 }
 
 
 @media (max-width: 400px) {
+
+    .page-wrapper {
+        transition: 1s;
+    }
+
     .header-nav {
         width: 90%;
     }
@@ -169,7 +175,8 @@ section{
         justify-content: center;
 
     }
-    .project-title{
+
+    .project-title {
         font-size: 1rem;
     }
 
@@ -177,7 +184,8 @@ section{
         width: 80%;
         font-size: 0.8rem;
     }
-    .project-tags{
+
+    .project-tags {
         font-size: 1rem;
     }
 }
