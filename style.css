@@ -13,10 +13,17 @@ html {
 }
 
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Anton", sans-serif;
 }
-p, a{
+
+p,
+a {
     font-family: "Roboto", sans-serif;
 }
 
@@ -31,7 +38,7 @@ section {
 }
 
 header {
-    background-color: pink;
+    background-color: #222222;
 }
 
 footer {
@@ -40,7 +47,7 @@ footer {
 
 
 section {
-    background-color: rgb(180, 237, 241);
+    background-color: #222222;
 }
 
 
@@ -58,8 +65,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* border: solid; */
-    /* background-color: white; */
 }
 
 .page-button {
@@ -97,16 +102,16 @@ section {
 }
 
 .header-nav a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.3rem;
     padding: 0 10px;
-    text-decoration: solid underline rgba(0, 0, 0, 0);
+    text-decoration: solid line-through rgba(0, 0, 0, 0);
     transition: text-decoration 1s;
 }
 
 .header-nav a:hover {
-    text-decoration: underline solid rgb(49, 48, 48);
+    text-decoration: line-through solid rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -116,6 +121,30 @@ section {
     margin: 0 20px;
     padding: 0 20px;
 }
+
+/* header */
+header{
+    flex-direction: column;
+}
+
+.heading {
+    width: 70%;
+    /* margin: auto; */
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.header_buttons a {
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #222222;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+}
+
 
 /* projects */
 .project {
@@ -129,8 +158,16 @@ section {
 }
 
 .project1 {
-    background: url(https://plus.unsplash.com/premium_photo-1695045521233-b59b38739161?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+    background: url(https://images.unsplash.com/photo-1533991060678-93bb8ba60c4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
 }
+
+.project2{
+    background: url(https://images.unsplash.com/photo-1551672138-7ac1f86313c7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+}
+.project3{
+    background: url(https://images.unsplash.com/photo-1492086517200-9393d4eb53bf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+}
+
 
 .project-title,
 .project-description,
@@ -173,6 +210,120 @@ section {
     gap: 15px;
 }
 
+
+
+/* BENTO GRID */
+.projects-bento {
+    display: grid;
+    grid-template-areas: "tile1 tile2 tile2 tile3"
+    "tile1 tile4 tile5 tile3";
+    
+    grid-template-rows: 300px 300px;
+    grid-template-columns: repeat(4, 200px);
+    gap: 20px;
+}
+
+.tile {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-description{
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.tile1 {
+    grid-area: tile1;
+    background: url(https://images.unsplash.com/photo-1568191009535-7d8b407d389a?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+}
+
+.tile2 {
+    grid-area: tile2;
+    background: url(https://plus.unsplash.com/premium_photo-1672777647624-2ced35ca04d6?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+}
+
+.tile3 {
+    grid-area: tile3;
+    background: url(https://images.unsplash.com/photo-1461696114087-397271a7aedc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+}
+
+.tile4 {
+    grid-area: tile4;
+    background: url(https://images.unsplash.com/photo-1592355591829-aaae33fcff1d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+}
+.tile5{
+    grid-area: tile5;
+    background: url(https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+
+}
+
+/* footer */
+footer{
+    background: url(https://images.unsplash.com/photo-1528824095725-2b815e91598d?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
+    flex-direction: column;
+    position: relative;
+}
+
+.footer-text{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.skill-set{
+    display: flex;
+    gap: 10px;
+    margin: auto;
+    /* border: solid; */
+    width: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.skill-set li{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    list-style-type: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.skill-set img{
+    width: 100%;
+    height: 100%;
+}
+.footer_contacts{
+    position: absolute;
+    bottom: 0;
+    background-color: #f1f1f1;
+    width: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_contacts a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.footer_contacts img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
 
 @media (max-width: 400px) {
 

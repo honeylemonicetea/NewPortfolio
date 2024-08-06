@@ -88,7 +88,7 @@ footerBtn.onclick = () => {
 
 // TYPEWRITER ANIMATION FOR THE HEADER
 let heading = document.querySelector(".heading")
-let text = "header"
+let text = "Hello, I am Bella. I am a web developer based in Los Angeles, California 🌴⭐"
 let curInd = 0
 let outputText = []
 let interval
@@ -101,4 +101,4 @@ function typeWriter() {
     }
 }
 
-interval = setInterval(typeWriter, 500)
+interval = setInterval(typeWriter, 100)
