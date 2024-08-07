@@ -325,6 +325,7 @@ footer {
 }
 .skill-set li:hover{
     background-color: rgba(255, 255, 255, 0.4);
+    /* cursor: pointer; */
 }
 
 .skill-set img {
@@ -363,8 +364,17 @@ footer {
 }
 
 @media (max-width: 400px) {
+    html{
+        font-size: 12px;
+    }
+    .heading-wrapper{
+        width: 80%;
+    }
     .heading, .heading-ghost {
         font-size: 2rem;
+    }
+    .page-controls{
+        right: 20px;
     }
 
     .page-wrapper {
@@ -374,7 +384,10 @@ footer {
     .header-nav {
         width: 90%;
     }
-
+    .header-nav a:nth-child(2){
+        margin: 0 10px;
+        padding: 0 10px;
+    }
     .project {
         justify-content: center;
 
@@ -396,7 +409,8 @@ footer {
 
     .projects-bento{
         padding: 10px;
-        width: 80%;
+        width: 90%;
+        gap: 10px;
      grid-template-areas: "tile1 tile2"
      "tile3 tile4"
      "tile5 tile5";
@@ -416,8 +430,8 @@ footer {
         width: 80%;
     }
     .skill-set li{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
     .footer_contacts{
         width: 70%;
