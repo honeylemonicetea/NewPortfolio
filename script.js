@@ -15,16 +15,21 @@ let backgroundChange = function () {
     controlButtons[scrollFactor].style.backgroundColor = "rgba(255,255,255,0.5)"
 }
 
+let scrolled = false
 
 document.addEventListener("wheel", function (event) {
     let deltaY = event.deltaY //positive  - scroll down, negative - scroll up
-    if (deltaY > 0 && scrollFactor < childrenLength - 1) {
+    if (deltaY > 0 && scrollFactor < childrenLength - 1 && !scrolled) {
         scrollFactor++
-    } else if (deltaY < 0 && scrollFactor > 0) {
+        scrolled = true
+    } else if (deltaY < 0 && scrollFactor > 0 && !scrolled) {
         scrollFactor--
+        scrolled = true
     }
-
     backgroundChange()
+    setTimeout(()=>{
+        scrolled = false
+    }, 100)
 })
 document.addEventListener("keydown", function (event) {
     let keyCode = event.keyCode
