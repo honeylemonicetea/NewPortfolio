@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -19,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Anton", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 p,
@@ -123,16 +124,32 @@ section {
 }
 
 /* header */
-header{
+header {
     flex-direction: column;
 }
 
-.heading {
+.heading-wrapper {
+    position: relative;
     width: 70%;
-    /* margin: auto; */
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.heading,
+.heading-ghost {
     font-size: 3rem;
     text-align: center;
     color: white;
+}
+
+.heading-ghost {
+    color: rgba(255, 255, 255, 0);
 }
 
 .header_buttons a {
@@ -161,10 +178,11 @@ header{
     background: url(https://images.unsplash.com/photo-1533991060678-93bb8ba60c4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
 }
 
-.project2{
+.project2 {
     background: url(https://images.unsplash.com/photo-1551672138-7ac1f86313c7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
 }
-.project3{
+
+.project3 {
     background: url(https://images.unsplash.com/photo-1492086517200-9393d4eb53bf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
 }
 
@@ -216,8 +234,8 @@ header{
 .projects-bento {
     display: grid;
     grid-template-areas: "tile1 tile2 tile2 tile3"
-    "tile1 tile4 tile5 tile3";
-    
+        "tile1 tile4 tile5 tile3";
+
     grid-template-rows: 300px 300px;
     grid-template-columns: repeat(4, 200px);
     gap: 20px;
@@ -231,11 +249,16 @@ header{
     overflow: hidden;
 }
 
-.bento-description{
+.bento-description {
     background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
     bottom: 0;
     padding: 10px;
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+.tile:hover .bento-description{
+    transform: translateY(0);
 }
 
 .tile1 {
@@ -257,25 +280,27 @@ header{
     grid-area: tile4;
     background: url(https://images.unsplash.com/photo-1592355591829-aaae33fcff1d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
 }
-.tile5{
+
+.tile5 {
     grid-area: tile5;
     background: url(https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
 
 }
 
 /* footer */
-footer{
+footer {
     background: url(https://images.unsplash.com/photo-1528824095725-2b815e91598d?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center/cover;
     flex-direction: column;
     position: relative;
 }
 
-.footer-text{
+.footer-text {
     width: 70%;
     margin: auto;
     text-align: center;
 }
-.skill-set{
+
+.skill-set {
     display: flex;
     gap: 10px;
     margin: auto;
@@ -284,7 +309,8 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
 }
-.skill-set li{
+
+.skill-set li {
     width: 100px;
     height: 100px;
     border-radius: 10px;
@@ -295,37 +321,51 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 10px;
+    transition: 0.5s;
+}
+.skill-set li:hover{
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
-.skill-set img{
+.skill-set img {
     width: 100%;
     height: 100%;
 }
-.footer_contacts{
+
+.footer_contacts {
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     background-color: #f1f1f1;
     width: 50%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 10px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transition: 0.5s;
 }
-.footer_contacts a{
+.footer_contacts:hover{
+    bottom: 0;
+}
+.footer_contacts a {
     text-decoration: none;
     display: flex;
     align-items: center;
     color: black;
 }
-.footer_contacts img{
+
+.footer_contacts img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
 }
 
 @media (max-width: 400px) {
+    .heading, .heading-ghost {
+        font-size: 2rem;
+    }
 
     .page-wrapper {
         transition: 1s;
@@ -351,5 +391,35 @@ footer{
 
     .project-tags {
         font-size: 1rem;
+    }
+
+
+    .projects-bento{
+        padding: 10px;
+        width: 80%;
+     grid-template-areas: "tile1 tile2"
+     "tile3 tile4"
+     "tile5 tile5";
+     grid-template-rows: repeat(3, 22vh);
+     grid-template-columns: 50% 50%;
+    }
+    .bento-description h3{
+        font-size: 1rem;
+    }
+    .bento-description p{
+        font-size: 0.8rem;
+    }
+    .bento-description .project-button{
+        font-size: 0.8rem;
+    }
+    .skill-set{
+        width: 80%;
+    }
+    .skill-set li{
+        width: 60px;
+        height: 60px;
+    }
+    .footer_contacts{
+        width: 70%;
     }
 }
