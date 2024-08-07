@@ -29,7 +29,7 @@ document.addEventListener("wheel", function (event) {
     backgroundChange()
     setTimeout(()=>{
         scrolled = false
-    }, 100)
+    }, 200)
 })
 document.addEventListener("keydown", function (event) {
     let keyCode = event.keyCode
