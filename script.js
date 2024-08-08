@@ -93,7 +93,7 @@ footerBtn.onclick = () => {
 
 // TYPEWRITER ANIMATION FOR THE HEADER
 let heading = document.querySelector(".heading")
-let text = "Hello, I am Bella. I am a web developer based in Los Angeles, California 🌴⭐"
+let text = "Привет, меня зовут Фирюза. Я веб-разработчик из Казани."
 let curInd = 0
 let outputText = []
 let interval

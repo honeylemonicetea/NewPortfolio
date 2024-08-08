@@ -1,177 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <nav class="header-nav">
-    <a id="home-btn">Home</a>
-    <a id="projects-btn">Projects</a>
-    <a id="footer-btn">About</a>
-  </nav>
-  <div class="page-wrapper">
-    <header>
-      <div class="heading-wrapper">
-        <h1 class="heading-ghost">
-          Hello, I am Bella. I am a web developer based in Los Angeles, California 🌴⭐
-        </h1>
-        <h1 class="heading">header</h1>
-      </div>
-      <div class="header_buttons">
-        <a href="">Contact Me</a>
-        <a href="">CV</a>
-      </div>
-    </header>
-    <section class="project project1">
-      <h2 class="project-title">Project Name</h2>
-      <div class="project-description">
-        <p>Project Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet illum
-          reiciendis quaerat nihil consectetur id </p>
-        <a href="" class="project-button">Code</a>
-        <a href="" class="project-button">Demo</a>
-
-      </div>
-      <div class="project-tags">
-        <p>#frontend</p>
-        <p>#react</p>
-      </div>
-    </section>
-    <section class="project project2">
-      <h2 class="project-title">Project Name</h2>
-      <div class="project-description">
-        <p>Project Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet illum
-          reiciendis quaerat nihil consectetur id </p>
-        <a href="" class="project-button">Code</a>
-        <a href="" class="project-button">Demo</a>
-
-      </div>
-      <div class="project-tags">
-        <p>#frontend</p>
-        <p>#react</p>
-      </div>
-
-    </section>
-    <section class="project project3">
-      <h2 class="project-title">Project Name</h2>
-      <div class="project-description">
-        <p>Project Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eveniet illum
-          reiciendis quaerat nihil consectetur id </p>
-        <a href="" class="project-button">Code</a>
-        <a href="" class="project-button">Demo</a>
-
-      </div>
-      <div class="project-tags">
-        <p>#frontend</p>
-        <p>#react</p>
-      </div>
-    </section>
-    <section>
-      <div class="projects-bento">
-        <div class="tile tile1">
-          <div class="bento-description">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <a href="" class="project-button">Demo</a>
-            <a href="" class="project-button">Code</a>
+  <body>
+    <nav class="header-nav">
+      <a id="home-btn">Главная</a>
+      <a id="projects-btn">Проекты</a>
+      <a id="footer-btn">Обо мне</a>
+    </nav>
+    <div class="page-wrapper">
+      <header>
+        <div class="heading-wrapper">
+          <h1 class="heading-ghost">
+            Привет, меня зовут Фирюза. Я веб-разработчик из Казани.
+          </h1>
+          <h1 class="heading"></h1>
+        </div>
+        <div class="header_buttons">
+          <a href="">Связаться со мной</a>
+          <a href="">Резюме</a>
+        </div>
+      </header>
+      <section class="project project1">
+        <div class="project-overlay"></div>
+        <h2 class="project-title">Twitter</h2>
+        <div class="project-description">
+          <p>Копия Twitter</p>
+          <a
+            href="https://github.com/honeylemonicetea/TwitterCopycat"
+            class="project-link"
+            target="_blank"
+            >Код</a
+          >
+          <a
+            href="https://gilded-halva-8d31cf.netlify.app/"
+            class="project-link"
+            target="_blank"
+            >Демо</a
+          >
+        </div>
+        <div class="project-tags">
+          <p>#fullstack</p>
+          <p>#nextjs</p>
+          <p>#mongodb</p>
+        </div>
+      </section>
+      <section class="project project2">
+        <div class="project-overlay"></div>
+        <h2 class="project-title">Last.fm Charts</h2>
+        <div class="project-description">
+          <p>Сайт, демонстрирующий чарты Last.fm.</p>
+          <a
+            href="https://github.com/honeylemonicetea/LastFMStats"
+            class="project-link"
+            target="_blank"
+            >Код</a
+          >
+          <a
+            href="https://last-fm-charts.onrender.com/"
+            class="project-link"
+            target="_blank"
+            >Демо</a
+          >
+        </div>
+        <div class="project-tags">
+          <p>#python</p>
+          <p>#django</p>
+        </div>
+      </section>
+      <section class="project project3">
+        <div class="project-overlay"></div>
+        <h2 class="project-title">Song Trivia</h2>
+        <div class="project-description">
+          <p>Музыкальная викторина, вдохновленная приложением Song Pop</p>
+          <a href="" class="project-link" target="_blank">Код</a>
+          <a href="" class="project-link" target="_blank">Демо</a>
+        </div>
+        <div class="project-tags">
+          <p>#drf</p>
+          <p>#react</p>
+          <p>#fullstack</p>
+          <p>#django</p>
+        </div>
+      </section>
+      <section>
+        <div class="projects-bento">
+          <div class="tile tile1">
+            <div class="bento-description">
+              <h3>Project Name</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <a href="" class="project-button" target="_blank">Демо</a>
+              <a href="" class="project-button" target="_blank">Код</a>
+            </div>
+          </div>
+          <div class="tile tile2">
+            <div class="bento-description">
+              <h3>Project Name</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <a href="" class="project-button" target="_blank">Демо</a>
+              <a href="" class="project-button" target="_blank">Код</a>
+            </div>
+          </div>
+          <div class="tile tile3">
+            <div class="bento-description">
+              <h3>Project Name</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <a href="" class="project-button" target="_blank">Демо</a>
+              <a href="" class="project-button" target="_blank">Код</a>
+            </div>
+          </div>
+          <div class="tile tile4">
+            <div class="bento-description">
+              <h3>Project Name</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <a href="" class="project-button" target="_blank">Демо</a>
+              <a href="" class="project-button" target="_blank">Код</a>
+            </div>
+          </div>
+          <div class="tile tile5">
+            <div class="bento-description">
+              <h3>Project Name</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <a href="" class="project-button" target="_blank">Демо</a>
+              <a href="" class="project-button" target="_blank">Код</a>
+            </div>
           </div>
         </div>
-        <div class="tile tile2">
-          <div class="bento-description">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <a href="" class="project-button">Demo</a>
-            <a href="" class="project-button">Code</a>
-          </div>
+      </section>
+      <footer>
+        <div class="footer-container">
+          <h2 class="footer-text">
+            I am Bella, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <ul class="skill-set">
+            <li>
+              <img src="img/icons/html-1.svg" alt="" title="HTML" />
+            </li>
+            <li>
+              <img src="img/icons/css-3.svg" alt="" title="CSS" />
+            </li>
+            <li>
+              <img
+                src="img/icons/logo-javascript.svg"
+                alt=""
+                title="JavaScript"
+              />
+            </li>
+            <li>
+              <img src="img/icons/figma-icon.svg" alt="" title="Figma" />
+            </li>
+            <li>
+              <img src="img/icons/python-5.svg" alt="" title="Python" />
+            </li>
+            <li>
+              <img src="img/icons/react-2.svg" alt="" title="ReactJS" />
+            </li>
+            <li>
+              <img src="img/icons/next-js.svg" alt="" title="NextJS" />
+            </li>
+            <li>
+              <img src="img/icons/django.svg" alt="" title="Django" />
+            </li>
+            <li>
+              <img src="img/icons/Git-Icon-Black.svg" alt="" title="Git" />
+            </li>
+            <li>
+              <img src="img/icons/new-php-logo.svg" alt="" title="PHP" />
+            </li>
+          </ul>
         </div>
-        <div class="tile tile3">
-          <div class="bento-description">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <a href="" class="project-button">Demo</a>
-            <a href="" class="project-button">Code</a>
-          </div>
-        </div>
-        <div class="tile tile4">
-          <div class="bento-description">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <a href="" class="project-button">Demo</a>
-            <a href="" class="project-button">Code</a>
-          </div>
-        </div>
-        <div class="tile tile5">
-          <div class="bento-description">
-            <h3>Project Name</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <a href="" class="project-button">Demo</a>
-            <a href="" class="project-button">Code</a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <footer>
-      <div class="footer-container">
-        <h2 class="footer-text">
-          I am Bella, Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        </h2>
-        <ul class="skill-set">
-          <li>
-            <img src="img/icons/html-1.svg" alt="" title="HTML">
-          </li>
-          <li>
-            <img src="img/icons/css-3.svg" alt="" title="CSS">
-          </li>
-          <li>
-            <img src="img/icons/logo-javascript.svg" alt="" title="JavaScript">
-          </li>
-          <li>
-            <img src="img/icons/figma-icon.svg" alt="" title="Figma">
-          </li>
-          <li>
-            <img src="img/icons/python-5.svg" alt="" title="Python">
-          </li>
-          <li>
-
-            <img src="img/icons/react-2.svg" alt="" title="ReactJS">
-          </li>
-          <li>
-            <img src="img/icons/next-js.svg" alt="" title="NextJS">
-          </li>
-          <li>
-            <img src="img/icons/django.svg" alt="" title="Django">
-          </li>
-          <li>
-            <img src="img/icons/Git-Icon-Black.svg" alt="" title="Git">
-          </li>
-          <li>
-            <img src="img/icons/new-php-logo.svg" alt="" title="PHP">
-          </li>
-        </ul>
-
-      </div>
         <div class="footer_contacts">
-          <a href="">
-            <img src="img/icons/github-mark.svg" alt="">GitHub Profile
-          </a>
+          <a href=""> GitHub Profile </a>
           <a href="">My CV</a>
         </div>
-    </footer>
-  </div>
-  <div class="page-controls">
-    <button class="page-button"></button>
-    <button class="page-button"></button>
-    <button class="page-button"></button>
-    <button class="page-button"></button>
-    <button class="page-button"></button>
-    <button class="page-button"></button>
-  </div>
-</body>
-<script src="script.js"></script>
-
+      </footer>
+    </div>
+    <div class="page-controls">
+      <button class="page-button"></button>
+      <button class="page-button"></button>
+      <button class="page-button"></button>
+      <button class="page-button"></button>
+      <button class="page-button"></button>
+      <button class="page-button"></button>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
