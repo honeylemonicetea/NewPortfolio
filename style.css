@@ -92,7 +92,7 @@ section {
   background-color: rgb(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  width: 40%;
+  width: 45%;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -163,12 +163,8 @@ header {
 /* projects */
 .project-overlay{
   position: absolute;
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 70%);
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.8) 70%);
-   */
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0,0,0,1));
-
-  /* background-color: #222222; */
+  backdrop-filter: blur(4px);
   width: 100%;
   height: 100%;
   top: 0;
@@ -219,7 +215,7 @@ header {
 }
 
 .project3 {
-  background: url(https://images.unsplash.com/photo-1492086517200-9393d4eb53bf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+  background: url("./img/projects/Song Trivia.png")
     center/cover;
 }
 
@@ -268,8 +264,8 @@ header {
 .projects-bento {
   display: grid;
   grid-template-areas:
-    "tile1 tile2 tile2 tile3"
-    "tile1 tile4 tile5 tile3";
+    "tile1 tile2 tile2 tile2"
+    "tile1 tile4 tile3 tile3";
 
   grid-template-rows: 300px 300px;
   grid-template-columns: repeat(4, 200px);
@@ -285,12 +281,13 @@ header {
 }
 
 .bento-description {
-  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
   position: absolute;
   bottom: 0;
   padding: 10px;
   transform: translateY(100%);
-  transition: 0.5s;
+  transition: transform 0.5s;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .tile:hover .bento-description {
   transform: translateY(0);
@@ -298,25 +295,25 @@ header {
 
 .tile1 {
   grid-area: tile1;
-  background: url(https://images.unsplash.com/photo-1568191009535-7d8b407d389a?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+  background: url("./img/projects/darker.avif")
     center/cover;
 }
 
 .tile2 {
   grid-area: tile2;
-  background: url(https://plus.unsplash.com/premium_photo-1672777647624-2ced35ca04d6?q=80&w=1227&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+  background: url("./img/projects/clothing.jpg")
     center/cover;
 }
 
 .tile3 {
   grid-area: tile3;
-  background: url(https://images.unsplash.com/photo-1461696114087-397271a7aedc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+  background: url("./img/projects/landify.svg")
     center/cover;
 }
 
 .tile4 {
   grid-area: tile4;
-  background: url(https://images.unsplash.com/photo-1592355591829-aaae33fcff1d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+  background: url("./img/projects/about-img-front.png")
     center/cover;
 }
 
@@ -328,8 +325,7 @@ header {
 
 /* footer */
 footer {
-  background: url(https://images.unsplash.com/photo-1528824095725-2b815e91598d?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-    center/cover;
+  background-color: #222222;
   flex-direction: column;
   position: relative;
 }
@@ -338,12 +334,13 @@ footer {
   width: 70%;
   margin: auto;
   text-align: center;
+  color: white;
 }
 
 .skill-set {
   display: flex;
   gap: 10px;
-  margin: auto;
+  margin:20px auto;
   /* border: solid; */
   width: 60%;
   flex-wrap: wrap;
@@ -382,11 +379,18 @@ footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 10px;
-  padding-bottom: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   transition: 0.5s;
+}
+
+.footer_contacts-container{
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 .footer_contacts:hover {
   bottom: 0;
