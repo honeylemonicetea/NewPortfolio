@@ -295,7 +295,7 @@ header {
 
 .tile1 {
   grid-area: tile1;
-  background: url("./img/projects/darker.avif")
+  background: url("./img/projects/darker.png")
     center/cover;
 }
 
